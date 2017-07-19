@@ -16,7 +16,8 @@
     <div class="prog-main-title">
       {{ program.name }}
     </div>
-    <div class="prog-main-content">{{ program.description }}</div>
+    <div class="prog-main-content" [innerHTML]="program.description | parseBreakLine"></div>
+    <!--<div class="prog-main-content">{{program.description | parseBreakLine}}</div> /** problème d'interpolation des éléments HTML**/-->
   </div>
   <div class="prog-actions">
     <i class="fa fa-pencil" aria-hidden="true" [routerLink]="['detail', i]"></i>
