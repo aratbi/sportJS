@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {Exercice} from "../../../shared/program/exercice";
+import {Component, Input, OnInit} from '@angular/core';
+import {Exercice} from '../../../shared/program/exercice';
 
 @Component({
   selector: 'sp-exercices-list',
@@ -8,7 +8,7 @@ import {Exercice} from "../../../shared/program/exercice";
 })
 export class ExercicesListComponent implements OnInit {
 
-  exercices: Exercice[] = [];
+  @Input() exercices: Exercice[] = [];
 
   constructor() { }
 

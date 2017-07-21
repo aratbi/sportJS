@@ -1,7 +1,8 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {Component, ComponentRef, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import { CARDIO_TRAINING, Exercice, EXERCICE_TYPES, LESSON, REINFORCEMENT } from '../../../shared/program/exercice';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { FormUtils } from '../../../shared/utils/form-utils';
+import {PopinComponent} from '../../../shared/popin/popin.component';
 
 const errorMessage = {
   categoryRequired: 'il faut choisir entre cours, cardio et renforcement',
